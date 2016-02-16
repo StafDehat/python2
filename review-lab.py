@@ -43,7 +43,7 @@ def playOnce(wallet):
         print "You lose - remaining balance $",wallet
         return wallet
       else:
-        print total
+        print total,
         point = total
         firstRoll = False
     else:
@@ -58,6 +58,7 @@ def playOnce(wallet):
         print "You win - remaining balance $",wallet
         return wallet
       else:
+        print total,
         continue
 
 
@@ -66,14 +67,14 @@ while True:
   if ( wallet <= 0 ):
     print "Sorry, you're broke."
     quit()
-  print "Play again?"
+  print "Play again? [y/n] ",
   choice = raw_input().lower()
-  if ( choice == "yes" ):
+  if ( choice == "y" ):
     wallet = playOnce(wallet)
     continue
-  elif ( choice == "no" ):
+  elif ( choice == "n" ):
     break
   else:
-    print "Please enter \"yes\" or \"no\""
+    print "Please enter \"y\" or \"n\""
 
 
