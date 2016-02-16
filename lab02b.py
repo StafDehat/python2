@@ -6,7 +6,8 @@ myFile = open("tmpprecip2012.dat", "r")
 
 lineNum = 0
 rainyDays = 0
-totalPrecip = 0
+totalPrecip = 0.0
+
 for line in myFile:
   lineNum += 1
   try:
