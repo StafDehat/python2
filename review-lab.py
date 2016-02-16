@@ -67,10 +67,10 @@ while True:
   print "Remaining balance: $",wallet
   print "Play again? [y/n] ",
   choice = raw_input().lower()
-  if ( choice == "y" ):
+  if ( choice in "Yy" ):
     wallet = wallet + playOnce(bet)
     continue
-  elif ( choice == "n" ):
+  elif ( choice in "Nn" ):
     break
   else:
     print "Please enter \"y\" or \"n\""
