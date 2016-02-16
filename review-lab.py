@@ -30,9 +30,9 @@ def playOnce(bet):
   while True:
     total = rollDice(2)
     if firstRoll:
-      # 7 or 10 wins
+      # 7 or 11 wins
       # 2, 3, 12 loss
-      if (total == 7) or (total == 10):
+      if (total == 7) or (total == 11):
         print total
         print "You won $",bet
         return bet
