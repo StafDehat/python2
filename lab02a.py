@@ -1,3 +1,5 @@
+# Author: Andrew Howard
+
 import string
 
 myFile = open("alice_in_wonderland.dat", "r")
