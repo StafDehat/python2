@@ -1,4 +1,3 @@
-import math
 import string
 
 myFile = open("alice_in_wonderland.dat", "r")
