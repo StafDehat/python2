@@ -1,6 +1,7 @@
 # Solution:
 # https://dl.dropboxusercontent.com/u/68071780/labdone.py
 
+# Author: Andrew Howard
 import random
 import math
 import sys
