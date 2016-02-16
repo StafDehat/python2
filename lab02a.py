@@ -3,7 +3,7 @@
 import string
 
 myFile = open("alice_in_wonderland.dat", "r")
-data = myFile.read()
+data = myFile.read().lower()
 
 countTotal = 0
 
@@ -11,7 +11,7 @@ for char in data:
   if char.isalpha():
     countTotal += 1
 
-countE = data.count('e')+data.count('E')
+countE = data.count('e')
 
 print "Total e's:   ",countE
 print "Total chars: ",countTotal
