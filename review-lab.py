@@ -24,7 +24,7 @@ def rollDice(count):
   return total
 
 # Play a round
-def playOnce(wallet):
+def playOnce(bet):
   # Play loop
   firstRoll = True
   while True:
@@ -34,14 +34,12 @@ def playOnce(wallet):
       # 2, 3, 12 loss
       if (total == 7) or (total == 10):
         print total
-        wallet = wallet + 10
-        print "You win - remaining balance $",wallet
-        return wallet
+        print "You won $",bet
+        return bet
       elif (total == 2) or (total == 3) or (total == 12):
         print total
-        wallet = wallet - 10
-        print "You lose - remaining balance $",wallet
-        return wallet
+        print "You lost $",bet
+        return 0-bet
       else:
         print total,
         point = total
@@ -49,28 +47,28 @@ def playOnce(wallet):
     else:
       if (total == 7):
         print total
-        wallet = wallet - 10
-        print "You lose - remaining balance $",wallet
-        return wallet
+        print "You lost $",bet
+        return 0-bet
       elif (total == point):
         print total
-        wallet = wallet + 10
-        print "You win - remaining balance $",wallet
-        return wallet
+        print "You won $",bet
+        return bet
       else:
         print total,
         continue
 
 
-wallet = playOnce(wallet)
+bet = 10
+wallet = wallet + playOnce(bet)
 while True:
   if ( wallet <= 0 ):
     print "Sorry, you're broke."
     quit()
+  print "Remaining balance: $",wallet
   print "Play again? [y/n] ",
   choice = raw_input().lower()
   if ( choice == "y" ):
-    wallet = playOnce(wallet)
+    wallet = wallet + playOnce(bet)
     continue
   elif ( choice == "n" ):
     break
