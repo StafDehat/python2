@@ -11,7 +11,7 @@ for char in data:
   if char.isalpha():
     countTotal += 1
 
-countE = data.count('e')+data.count("e")
+countE = data.count('e')+data.count('E')
 
 print "Total e's:   ",countE
 print "Total chars: ",countTotal
