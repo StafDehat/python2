@@ -2,6 +2,8 @@
 
 import random
 
+classSize = 23
+
 def has_duplicates(inList):
   for x in inList:
     if ( inList.count(x) > 1 ):
@@ -20,11 +22,12 @@ def birthClass(size):
 
 # Return odds of 2+ students having same birthday
 def whatAreTheOdds(numStudents):
-  iterations = 10000
+  iterations = 1000
   dupeCount = 0
   for x in xrange(iterations):
     if has_duplicates(birthClass(numStudents)):
       dupeCount += 1
   return float(dupeCount)/iterations*100
 
-print "Odds of shared birthday: %.2f%%" % (whatAreTheOdds(23))
+print "Odds of shared birthday: %.2f%%" % (whatAreTheOdds(classSize))
+
