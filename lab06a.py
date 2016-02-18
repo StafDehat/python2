@@ -31,4 +31,4 @@ for char in text:
     continue
   hist[char] = hist.get(char,0) + 1
 
-printDict(hist,5)
+printDict(sorted(hist),5)
