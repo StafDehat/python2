@@ -10,7 +10,10 @@ import sys
 def fahrenheit_to_centigrade(*xtmps):
   print xtmps,type(xtmps)
   for xtmp in xtmps:
-    if ( not isinstance(xtmp,(int,float)) ):
+    try:
+      xtmp = float(xtmp)
+    except ValueError:
+      print "Bad data:",xtmp
       continue
     nutmp = 5.0 / 9.0 * (xtmp - 32)
     print '%.1f degrees Fahrenheit is %.1f degrees Centigrade' % (
@@ -28,3 +31,5 @@ for x in sys.argv[1:]:
     print "Invalid data:",x
     continue
   fahrenheit_to_centigrade(tempHeh)
+
+fahrenheit_to_centigrade(*sys.argv[1:])
