@@ -1,0 +1,12 @@
+list = [x,y,z]
+
+tuple = (x,y,z)
+Note: immutable list
+
+dictionary = {x:1,y:2,z:3}
+Note: Unordered
+Note: 'key' has to be immutable
+Note: dict['gdhklh'] == KeyError
+Note: 'in' only works on keys, not values
+
+set = 
