@@ -11,7 +11,7 @@ def importData(data, inFile):
       tmpList.append(int(line[2:4]))    # 1 Day
       tmpList.append(int(line[4:8]))    # 2 Year
       tmpList.append(float(line[8:13])) # 3 Precipitation
-      tmpList.append(int(line[14:]))    # 4 High temp
+      tmpList.append(int(line[13:]))    # 4 High temp
     except ValueError:
       print "Invalid data on line %d: %r" % (lineCount, line)
       continue
