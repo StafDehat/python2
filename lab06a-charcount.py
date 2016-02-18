@@ -21,8 +21,6 @@ def printDict(data, lineLen):
   print "Max key length:  ",keyLen
   sortedData = sorted(zip(data.values(),data.keys()), reverse=True)
   while True:
-#    if lineNum*lineLen >= len(sortedData):
-#      break
     for x in (xrange(5)):
       index = lineLen*lineNum + x
       if index >= len(sortedData):

@@ -9,4 +9,6 @@ Note: 'key' has to be immutable
 Note: dict['gdhklh'] == KeyError
 Note: 'in' only works on keys, not values
 
-set = 
+set = {1,2,3}
+Note: Sets are all unique values
+Note: Unordered
